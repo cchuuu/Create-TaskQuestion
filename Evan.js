@@ -31,7 +31,10 @@ function displayToDoList(array) {
     const specificCardText =
       specificCard.querySelector(".to-do-card").textContent;
 
+    //Sequencing
+    //Iteration
     for (let i = 0; i < ToDoItems.length; i++) {
+      //Selection
       if (ToDoItems[i] === specificCardText) {
         ToDoItems.splice(i, 1);
         break;
