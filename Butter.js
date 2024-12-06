@@ -30,6 +30,7 @@ function retrieveFeelingQuote(category) {
       quoteCurrent.push(quoteObject); //Quote added to short term storage (Current Quote)
       // Display the quote on the page
       console.log("Current Quote:", quoteCurrent); //Check to see if current quote works
+      //Iteration
       for (let i = 0; i < quoteCurrent.length; i++) {
         const quote = quoteCurrent[i];
         createQuoteCard(quote);
@@ -60,7 +61,7 @@ DOMSelectors.generalForm.addEventListener(
     const valueUserAge = encodeURIComponent(DOMSelectors.userAge.value); // Test for displaying user Age: young / old
     const valueUserFeeling = encodeURIComponent(DOMSelectors.userFeeling.value); // Test for displaying user feeling: one of the options
     let category = "";
-
+    //Selection
     if (valueUserAge === "young") {
       console.log(
         "You still have a long life ahead of you) Look what is out there!"
@@ -72,14 +73,19 @@ DOMSelectors.generalForm.addEventListener(
     }
     categorySet();
     function categorySet() {
+      //Selection
       if (valueUserFeeling === "Happy") {
         category = "happiness";
+        //Selection
       } else if (valueUserFeeling === "Sad") {
         category = "alone";
+        //Selection
       } else if (valueUserFeeling === "Scared") {
         category = "fear";
+        //Selection
       } else if (valueUserFeeling === "Bored") {
         category = "attitude";
+        //Selection
       } else if (valueUserFeeling === "Angry") {
         category = "anger";
       }
@@ -93,6 +99,7 @@ DOMSelectors.historyButton.addEventListener("click", function () {
 });
 const displayHistory = function () {
   DOMSelectors.mainOutput.innerHTML = ""; // Clear previous quote
+  //Iteration
   for (let i = 0; i < quoteHistory.length; i++) {
     const quote = quoteHistory[i];
     createQuoteCard(quote);
@@ -104,7 +111,9 @@ DOMSelectors.resetHistoryButton.addEventListener("click", function () {
 });
 const resetHistory = function () {
   DOMSelectors.mainOutput.innerHTML = ""; // Clear previous quote
+  //Selection
   if (quoteCurrent.length > 0) {
+    //Iteration
     for (let i = 0; i < quoteCurrent.length; i++) {
       const quote = quoteCurrent[i];
       createQuoteCard(quote);
