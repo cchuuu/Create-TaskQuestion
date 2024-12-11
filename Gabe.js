@@ -30,6 +30,7 @@ function game(qa) {
 
   function displayQuestion(input) {
     //Sequencing
+    //Selection
     if (i < input) {
       let q = qa[i];
       console.log(q);
@@ -59,6 +60,7 @@ function game(qa) {
   function checkAnswer(answer) {
     let q = qa[i];
     //Sequencing
+    //Selection
     if (q.correct.includes(answer)) {
       used.push("Correct");
     } else {
@@ -73,12 +75,15 @@ function game(qa) {
   function final(array) {
     let a = 0;
     let b = 0;
+    //Iteration
     for (let i = 0; i < array.length; i++) {
       //Sequencing
+      //Selection
       if (array[i].includes("Correct")) {
         a++;
       }
       //Sequencing
+      //Selection
       if (array[i].includes("Incorrect")) {
         b++;
       }
